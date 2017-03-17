@@ -18,3 +18,6 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+Route::get('/login/{service}','Auth\SocialLoginController@redirect');//this two will handle varius social network
+Route::get('/login/{service}/callback','Auth\SocialLoginController@callback');//this two will handle varius social network
